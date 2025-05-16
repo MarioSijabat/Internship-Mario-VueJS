@@ -27,3 +27,54 @@ npm run dev
 ```sh
 npm run build
 ```
+# Vue.js User Management System
+
+Aplikasi ini memungkinkan pengguna untuk melakukan registrasi, login, serta mengelola daftar user (tambah, edit, hapus) menggunakan API **reqres.in**.
+
+## Fitur
+
+- **Login**: Pengguna dapat masuk dengan email dan password.
+- **Registrasi**: Pengguna dapat membuat akun baru.
+- **CRUD User**: Admin dapat menambah, mengedit, dan menghapus user.
+- **API**: Menggunakan API dari **reqres.in** untuk registrasi dan manajemen user.
+
+## Prasyarat
+
+Sebelum memulai, pastikan kamu sudah memiliki hal-hal berikut:
+- **Node.js** (terinstal di komputer kamu)
+- **npm** atau **yarn** (manajer paket untuk JavaScript)
+
+## API yang Digunakan
+POST /api/login: Untuk login dengan email dan password.
+
+POST /api/register: Untuk registrasi dengan email dan password.
+
+GET /api/users: Untuk mendapatkan daftar user.
+
+POST /api/users: Untuk menambah user baru.
+
+PUT /api/users/{id}: Untuk mengedit data user.
+
+DELETE /api/users/{id}: Untuk menghapus user.
+
+### Struktur Proyek
+bash
+Salin
+Edit
+/src
+  /assets
+    main.css          # Gaya global aplikasi
+  /components
+    UserCard.vue      # Komponen untuk menampilkan user card
+    Modal.vue         # Komponen modal konfirmasi
+    UserForm.vue      # Formulir untuk tambah/edit user
+    Alert.vue         # Komponen alert untuk pesan
+  /views
+    LoginView.vue     # Halaman login
+    RegisterView.vue  # Halaman registrasi
+    UserListView.vue  # Halaman daftar user
+  /api
+    users.js          # File API untuk operasi CRUD user
+  App.vue             # Komponen utama aplikasi
+  main.js             # File entry point aplikasi
+  router.js           # Router Vue.js untuk menangani navigasi halaman
